@@ -10,7 +10,7 @@ namespace _01_ByteBank
 
         public bool Sacar(double valor)
         {
-            if (this.saldo < valor) //O this serve pra pegar o saldo da instancia que o método for usado, e não do valor padrão da classe
+            if (this.saldo < valor) //O this serve pra pegar o saldo da instancia que o método for usado.
             {
                 return false;
             }
