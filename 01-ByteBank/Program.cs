@@ -48,6 +48,18 @@ namespace _01_ByteBank
             Console.WriteLine(contaTransferencia.saldo);
 
             Console.ReadLine(); //Não apaga o readline, se apagar o console nem abre direito.
+
+            //Crio aqui um objeto da classe cliente
+            Cliente armando = new Cliente();
+
+            //E vou atribuindo os valores;
+            armando.cpf = "***.631.394.**";
+            armando.nome = "Armando";
+            armando.profissao = "Desenvolvedor Estagiário";
+
+            //E agora vou criar uma contam para o cliente em específico
+            ContaCorrente armandoConta = new ContaCorrente();
+            armandoConta.titular = armando;
         }
     }
 }
