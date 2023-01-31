@@ -50,16 +50,34 @@ namespace _01_ByteBank
             Console.ReadLine(); //Não apaga o readline, se apagar o console nem abre direito.
 
             //Crio aqui um objeto da classe cliente
-            Cliente armando = new Cliente();
+            //Cliente armando = new Cliente();
 
             //E vou atribuindo os valores;
-            armando.cpf = "***.631.394.**";
-            armando.nome = "Armando";
-            armando.profissao = "Desenvolvedor Estagiário";
+            //armando.cpf = "***.631.394.**";
+            //armando.nome = "Armando";
+            //armando.profissao = "Desenvolvedor Estagiário";
 
             //E agora vou criar uma contam para o cliente em específico
             ContaCorrente armandoConta = new ContaCorrente();
-            armandoConta.titular = armando;
+            //armandoConta.titular = armando;
+
+            armandoConta.titular = new Cliente();
+
+            armandoConta.titular.nome = "Armando";
+            armandoConta.titular.cpf = "110.631.394-14";
+
+            //Console.WriteLine(armando.nome);
+            //Console.WriteLine(armandoConta.titular);
+            Console.WriteLine(armandoConta.titular.nome);
+
+            if (armandoConta.titular == null)
+            {
+                Console.WriteLine("Objeto nulo!");
+            }
+            else
+                Console.WriteLine("Não é nulo!");
+
+            Console.ReadLine();
         }
     }
 }
