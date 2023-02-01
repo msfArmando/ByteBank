@@ -1,4 +1,4 @@
-﻿using _01_ByteBank;
+﻿using _02_ByteBank;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
@@ -24,13 +24,16 @@ namespace _02_ByteBank
             //conta.SetSaldo(20); Pode-se substituir por:
             conta.Saldo = 20;
 
-            cliente.nome = "Eduarda";          //Passei as propriedades
-            cliente.cpf = "***.***.***-**";   //desse novo cliente
-            cliente.profissao = "Pedagoga";
+            cliente.Nome = "Eduarda";          //Passei as propriedades
+            cliente.CPF = "***.***.***-**";   //desse novo cliente
+            cliente.Profissao = "Pedagoga";
 
             conta.Titular = cliente; //Aqui é usado o set para alterar as propriedades do titular sem alterar a classe original, apenas com o objeto cliente
-            Console.WriteLine(conta.Titular.nome); //Aqui é usado o get para acecssar/retornar os valores que foram alterados
-            Console.WriteLine(conta.Titular.profissao);
+            Console.WriteLine(conta.Titular.Nome); //Aqui é usado o get para acecssar/retornar os valores que foram alterados
+            Console.WriteLine(conta.Titular.Profissao);
+            Console.WriteLine(conta.Titular.CPF);
+
+            conta.Agencia = 512;
 
             Console.ReadLine();
         }
